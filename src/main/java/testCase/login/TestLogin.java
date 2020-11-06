@@ -18,8 +18,8 @@ import static org.testng.Assert.assertEquals;
 
 /* 编写邮箱登录自动化测试用例,只执行一条正常流用例
 **/
-@Epic("一级目录1")
-@Feature("二级目录1")
+@Epic("登录用例1")
+@Feature("正常流登录用例")
 public class TestLogin {
     private WebDriver driver;
     private String baseUrl;
@@ -33,7 +33,7 @@ public class TestLogin {
         driver.manage().window().maximize();
     }
 
-    @Story("Story类似三级目录1")
+    @Story("用例执行")
     @Test
     public void testCase() throws Exception{
         driver.get(baseUrl);

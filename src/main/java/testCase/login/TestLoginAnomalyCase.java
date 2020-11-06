@@ -23,8 +23,8 @@ import static org.testng.Assert.assertEquals;
 * 例如登陆场景用例，正常流只有1条，但是异常流有多条，使用的代码脚本相同，那么在case层就可以使用参数化
 * 这里只写了异常流参数化，执行多条异常流用例
 * */
-@Epic("一级目录2")
-@Feature("二级目录2")
+@Epic("登录用例2")
+@Feature("参数化执行登录用例")
 public class TestLoginAnomalyCase{
     private WebDriver driver;
     private String baseUrl;
@@ -46,10 +46,10 @@ public class TestLoginAnomalyCase{
                 {"rlbtestemail","","请输入密码"},
                 {"","Qwe12345","请输入帐号"},
                 {"error","error","请先进行验证"},
-                {"rlbtestemail","Qwe12345",""},
+                {"rlbtestemail","renlibo0120",""},
         };
     }
-    @Story("Story类似三级目录2")
+    @Story("用例执行步骤")
     @Test(dataProvider = "user")
     public void testLoginCase(String username,String password,String expectText){
         try {
