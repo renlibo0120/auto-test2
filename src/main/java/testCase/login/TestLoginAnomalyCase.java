@@ -1,5 +1,8 @@
 package testCase.login;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import page.login.LoginExceptionText;
 import page.login.LoginPage;
 import testUtil.SelectDriver;
@@ -20,6 +23,8 @@ import static org.testng.Assert.assertEquals;
 * 例如登陆场景用例，正常流只有1条，但是异常流有多条，使用的代码脚本相同，那么在case层就可以使用参数化
 * 这里只写了异常流参数化，执行多条异常流用例
 * */
+@Epic("一级目录2")
+@Feature("二级目录2")
 public class TestLoginAnomalyCase{
     private WebDriver driver;
     private String baseUrl;
@@ -44,7 +49,7 @@ public class TestLoginAnomalyCase{
                 {"rlbtestemail","Qwe12345",""},
         };
     }
-
+    @Story("Story类似三级目录2")
     @Test(dataProvider = "user")
     public void testLoginCase(String username,String password,String expectText){
         try {

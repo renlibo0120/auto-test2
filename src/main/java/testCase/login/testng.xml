@@ -5,7 +5,7 @@
     <test name="test1">
         <classes>
             <class name="testCase.login.TestLogin"/>
-<!--            <class name="testCase.login.TestLoginAnomalyCase"/>-->
+            <class name="testCase.login.TestLoginAnomalyCase"/>
         </classes>
     </test>
 
